@@ -1,0 +1,27 @@
+# SHELLCODE-v4n15h3r
+# git5 - LoxoSec
+# https://git5loxosec.github.io
+
+
+Encrypts shellcode, embeds it in a signed DLL, evades detection, and executes on Windows systems.
+-------------------------------------------------------------
+
+The project employs several methods and techniques, including:
+
+1 - Shellcode Encryption
+2 - Obfuscation with XOR
+3 - Windows DLL
+4 - Self-Signed Certificate
+5 - Code Signing
+6 - Verification
+--------------------------------------------------------------
+
+Usage e.g.
+
+python3 v4n15h3r.py SHELLCODE_FILENAME (the script will generate a new template from the original template.cpp file)
+
+x86_64-w64-mingw32-g++ new.template.cpp -shared --static -o loader.dll -fpermissive (x86_64-w64-mingw32-g++ for compiling the new generated CPP template into a DLL file)
+
+./signer.sh (this simple bash script will generate, sign and verify the DLL file)
+
+	   	   
